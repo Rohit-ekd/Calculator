@@ -1,0 +1,71 @@
+/* .anta-regular {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anta", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+body{
+    background-color: #2D9596;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,90px);
+    grid-template-rows:minmax(90px,auto) repeat(5,90px); 
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: #265073;
+    opacity: 0.80;
+    text-align: right;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: scroll;
+}
+.calculator-grid button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid #9AD0C2;
+    background-color: #F1FADA;
+    opacity: 0.80;
+    outline: none;
+}
+.calculator-grid button:hover{
+    opacity: 1;
+}
+.output .previous-operand{
+    font-size:1.2rem;
+    color: #F1FADA;
+    opacity: 0.75;
+}
+.output .current-operand{
+    font-size:2rem;
+    color: #F1FADA;
+    opacity: 0.9;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
